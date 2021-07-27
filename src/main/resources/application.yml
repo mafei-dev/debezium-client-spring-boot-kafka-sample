@@ -1,0 +1,13 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: debezium-client-spring-boot-kafka-sample
+  kafka:
+    consumer:
+      bootstrap-servers: debezium_4_kafka_broker_1:9092
+      group-id: ${spring.application.name}
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
